@@ -3,7 +3,7 @@
  
     <div v-if="cats.length === 0">Loading...</div>
     <div v-if="cats && cats.length" class="cat-continer pt-28">
-      <ul  class="flex flex-wrap justify-between" >
+      <ul  class="flex flex-wrap justify-between m-view-flex" >
         <li v-for="cat of cats" :key="cat.id" class="card mb-12	" >
           <div class="img-card">
               <img v-bind:src='cat.image && cat.image.url' :alt='cat.name' /> 
@@ -71,4 +71,16 @@ height: 250px;
   width: 100%;
   height: 100%;
 }
+
+@media (max-width: 600px){
+.m-view-flex{
+  display: flex;
+  flex-direction: column;
+}
+.card{
+  width: 100%;
+}
+}
+
+
 </style>
